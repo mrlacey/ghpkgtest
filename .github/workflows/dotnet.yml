@@ -14,12 +14,17 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 3.1.301
+        source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+      env:
+        NUGET_AUTH_TOKEN: '%NUGET_AUTH_TOKEN%'
     - name: Restore dependencies
       run: dotnet restore ./Library
     - name: Build
-      run: dotnet build ./Library/MyDemoSharedLibrary.csproj --no-restore
+      run: dotnet build ./Library/MyDemoSharedLibrary.csproj --configuration Release --no-restore
     - name: Pack
-      run: dotnet pack ./Library/MyDemoSharedLibrary.csproj --configuration Release
+      run: dotnet pack ./Library/MyDemoSharedLibrary.csproj --no-build --configuration Release
     - name: Publish
-      run: dotnet nuget push ./Library/bin/Release/*.nupkg --api-key secrets.GITHUB_TOKEN --source "github"
+      run: dotnet nuget push ./Library/bin/Release/*.nupkg --skip-duplicate
+      env:
+        NUGET_AUTH_TOKEN: ${{ github.token }}
