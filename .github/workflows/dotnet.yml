@@ -3,7 +3,7 @@ name: .NET
 on:
   push:
     branches: [ main ]
-    paths: ./Library/**
+    paths: Library/*.*
 
 jobs:
   build:
