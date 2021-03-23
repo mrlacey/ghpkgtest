@@ -16,7 +16,7 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore /Library/MyDemoSharedLibrary.csproj
+      run: dotnet restore
     - name: Build
       run: dotnet build /Library/MyDemoSharedLibrary.csproj --no-restore
     - name: Pack
