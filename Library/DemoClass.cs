@@ -11,6 +11,7 @@ namespace MyDemoSharedLibrary
             yield return "friends";
             yield return "enjoy";
             yield return "this";
+            yield return "sample";
             yield return "text";
         }
     }
