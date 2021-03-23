@@ -16,10 +16,10 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./Library
     - name: Build
-      run: dotnet build /Library/MyDemoSharedLibrary.csproj --no-restore
+      run: dotnet build ./Library/MyDemoSharedLibrary.csproj --no-restore
     - name: Pack
-      run: dotnet pack /Library/MyDemoSharedLibrary.csproj --configuration Release
+      run: dotnet pack ./Library/MyDemoSharedLibrary.csproj --configuration Release
     - name: Publish
-      run: dotnet nuget push /Library/bin/Release/*.nupkg --api-key GITHUB_TOKEN --source "github"
+      run: dotnet nuget push ./Library/bin/Release/*.nupkg --api-key GITHUB_TOKEN --source "github"
