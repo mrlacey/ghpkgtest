@@ -22,4 +22,4 @@ jobs:
     - name: Pack
       run: dotnet pack ./Library/MyDemoSharedLibrary.csproj --configuration Release
     - name: Publish
-      run: dotnet nuget push ./Library/bin/Release/*.nupkg --api-key GITHUB_TOKEN --source "github"
+      run: dotnet nuget push ./Library/bin/Release/*.nupkg --api-key secrets.GITHUB_TOKEN --source "github"
