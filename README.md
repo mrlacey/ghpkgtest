@@ -1,4 +1,4 @@
-# GitHub Packages Test & Example
+# GitHub Packages Test and Example
 
 This is a sample repo for showing how to host NuGet packages on GitHub.
 
