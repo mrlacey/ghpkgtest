@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Matt Lacey</Authors>
+    <Company>Matt Lacey Ltd.</Company>
+    <PackageProjectUrl>https://github.com/mrlacey/ghpkgtest</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
