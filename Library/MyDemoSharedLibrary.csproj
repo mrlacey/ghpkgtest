@@ -6,6 +6,7 @@
     <Authors>Matt Lacey</Authors>
     <Company>Matt Lacey Ltd.</Company>
     <PackageProjectUrl>https://github.com/mrlacey/ghpkgtest</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mrlacey/ghpkgtest</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
